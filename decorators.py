@@ -12,9 +12,9 @@ print(f(3))
 
 # support multiple arguments
 def audit_to_txt(func):
-    def wrapper(*arg):
+    def wrapper(*args, **kwargs):
         print('INSTANTIATED FUNCTION: {}'.format(func.__name__))
-        return func(*arg)
+        return func(*args, **kwargs)
     return wrapper
 
 @audit_to_txt
