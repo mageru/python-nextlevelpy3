@@ -39,7 +39,20 @@ Modify your code to use lambda expressions instead of separately defined key fun
 '''
 
 # Write your code here:
+def max_by_key(items, key):
+    biggest = int()
+    for item in items:
+        if key(item) > key(biggest):
+            biggest = item
+    return biggest
 
+def get_spaces_count(input_str):
+    space_count = sum((str(c)).isspace() for c in input_str)
+    return space_count
+
+def most_spaces(spaces_str):
+    max_space = max(spaces_str, key=get_spaces_count)
+    return max_space
 
 
 # Do not edit any code below this line!
