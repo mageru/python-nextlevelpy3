@@ -54,6 +54,18 @@ def most_spaces(spaces_str):
     max_space = max(spaces_str, key=get_spaces_count)
     return max_space
 
+def vowel_ct(sentance):
+    vowels = ("a","e","i","o","u")
+    vowel_count = int(0)
+    for char in sentance:
+        if char in vowels:
+            vowel_count = vowel_count + 1
+    return vowel_count
+
+def fewest_vowels(*args):
+    min_vowel = min(args, key=vowel_ct)
+    return min_vowel
+
 
 # Do not edit any code below this line!
 
