@@ -1,0 +1,16 @@
+Python: The Next Level Class Notes
+
+### <Function Argument> ###
+*args = tuple
+**kwargs = dictionary
+
+**kwars example
+def print(kwargs(**kwargs):
+  for key, value in kwargs.items():
+    print("{} -> {}".format(key, value))
+	
+>>> print_kwargs(hero="Home", antihero="Bart", genius="Lisa"))
+hero -> Homer
+genius -> Lisa
+antihero -> Bart
+### </Function Argument> ###
